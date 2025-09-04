@@ -14,7 +14,7 @@ class CD(Base):
     name = models.CharField(max_length=90, unique=True)
     description = models.TextField(blank=True, null=True)
     ip = models.CharField(max_length=120)
-    balance = models.DecimalField(max_digits=10, decimal_places=2)
+    balance = models.DecimalField(max_digits=10, decimal_places=2, editable=False, default=0)
     region = models.CharField(max_length=100, blank=True, null=True)
     slug = models.SlugField(null=True)
 
